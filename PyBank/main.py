@@ -36,6 +36,27 @@ Greatest_Increase=max(Budget_Path_df["Yearly_change"])
 Greatest_Decrease = min(Budget_Path_df["Yearly_change"])
 Greatest_Monthly_Decrease= Budget_Path_df
 #print(Greatest_Decrease)
+
+#Save in a new_file.csv
+Month=[]
+Profit_Loss=[]
+
+
+with open(Budget_Path) as csv_file: 
+ csvreader = csv.reader(csv_file, delimiter=",")
+ for row in csvreader: 
+  Month.append(row[0])
+  Profit_Loss.append(row[1])
+
+  new_file=zip(Month, Profit_Loss)
+
+Output_Path=os.path.join("Analysis","New_file.csv")
+with open(Output_Path, 'w') as datafile:
+         writer = csv.writer(datafile)
+         writer.writerow(["Months", "Profit_Losses"])
+         writer.writerows(new_file)
+
+
 print("--------------------------------")
 print("Financial Analysis")
 print("--------------------------------")
@@ -44,3 +65,5 @@ print("Total:            " +str(Net_Total_Amount))
 print("Average Change:   " +str(Total_Yearly_change))
 print("Greatest Increase: " +str(Greatest_Increase))
 print("Greatest Decrease: " +str(Greatest_Decrease))
+
+
