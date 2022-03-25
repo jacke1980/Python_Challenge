@@ -27,8 +27,10 @@ Your task is to analyze the votes and calculates each of the following:
 
 [PyBank Results](https://github.com/jacke1980/Python_Challenge/blob/main/PyBank/Analysis/pyBank_analysis.txt)
 
+## PyPoll
+![Vote_counting](https://user-images.githubusercontent.com/85952426/160213140-99edcd15-925a-460d-ae37-1b7f8b56001f.png) 
 
-
+[PyPoll Results](https://github.com/jacke1980/Python_Challenge/blob/main/PyPoll/Analysis/pyPoll_analysis.txt)
 
 
 
